@@ -5,31 +5,9 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit {
-  images = ['15.JPG', '16.JPG', '2.JPG'];
-  currentImage = 0;
-  showImage = true;
-
-  ngOnInit(){
-    this.updateImage();
+export class AppComponent {
+  title(title: any) {
+    throw new Error('Method not implemented.');
   }
-
-  updateImage() {
-    
-
-    setInterval(() =>{
-      this.currentImage++;
-      this.currentImage = this.currentImage % this.images.length;
-      this.showImage = false;
-
-      setTimeout(()=>{
-        this.showImage =true;
-      }, 10);
-    },8000);
-  }
-
-
-
-
-
+ 
 }
